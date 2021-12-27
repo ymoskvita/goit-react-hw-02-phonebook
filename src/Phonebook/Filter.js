@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { InputStyled } from './Phonebook.styled'
 
 const Filter = ({ value, onChange }) => (
@@ -6,5 +7,10 @@ const Filter = ({ value, onChange }) => (
         <InputStyled type="text" value={value} onChange={onChange} />
     </label>
 )
+
+Filter.propTypes = {
+    value: PropTypes.string,
+    onChange:PropTypes.func,
+}
 
 export default Filter;

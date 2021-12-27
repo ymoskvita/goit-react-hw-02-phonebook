@@ -5,8 +5,6 @@ import Section from "./Phonebook/Section";
 import ContactsList from "./Phonebook/ContactsList";
 import Form from "./Phonebook/Form";
 import Filter from "./Phonebook/Filter";
-
-
 class App extends Component {
   state = {
     contacts: [
