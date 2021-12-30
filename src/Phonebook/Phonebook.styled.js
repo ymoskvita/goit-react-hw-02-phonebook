@@ -11,12 +11,6 @@ export const Title = styled.h2`
     text-align: center;
     font-weight: normal;
 `;
-export const Wrapper = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-`;
-
 export const InputStyled = styled.input`
     display: block;
     margin: 5px 0;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { nanoid } from 'nanoid'
-import { InputStyled, Btn} from './Phonebook.styled'
-
+import { nanoid } from 'nanoid';
+import PropTypes from 'prop-types';
+import { InputStyled, Btn } from './Phonebook.styled';
 class Form extends Component {
     state = {
         name: '',
@@ -13,15 +13,12 @@ class Form extends Component {
 
     handleChange = (event) => {
         const { name, value } = event.currentTarget;
-
         this.setState({ [name]: value});
     }
 
     handleSubmit = event => {
         event.preventDefault();
-
         this.props.onSubmit(this.state);
-
         this.reset();
     }
 
@@ -63,5 +60,9 @@ class Form extends Component {
         )
     }
 }
+
+Form.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+};
 
 export default Form;

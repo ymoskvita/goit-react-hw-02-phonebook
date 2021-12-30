@@ -32,7 +32,7 @@ class App extends Component {
 
     if (this.state.contacts.some(contact =>
       contact.name.toLocaleLowerCase().includes(normalizedName))) {
-      return toast.error(name + "is already in contacts.")
+      return toast.error(`${name} is already in contacts.`)
       }
 
       this.setState(prevState => ({
@@ -55,7 +55,6 @@ class App extends Component {
 
   render() {
     const { filter } = this.state;
-
     const visibleContacts = this.getVisibleContacts();
 
     return (
