@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import { SectionStyled, Title } from './Phonebook.styled';
+import { SectionStyled, Title } from '../Phonebook.styled';
 
 const Section = ({ title, children }) => {
     return (
@@ -13,6 +13,7 @@ const Section = ({ title, children }) => {
 
 Section.propTypes = {
     title: PropTypes.string,
+    children: PropTypes.node,
 }
 
 export default Section;
